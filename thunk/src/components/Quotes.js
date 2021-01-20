@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 
 import { getQuote, startFetch } from '../actions';
 
-const Quotes = ({ quote, isFetching, error }) => {
+const Quotes = ({ quote, isFetching, error, startFetch }) => {
   useEffect(() => {
   });
 
   const handleClick = ()=> {
-
+    startFetch();
   };
 
   if (error) {
@@ -35,4 +35,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Quotes);
+export default connect(mapStateToProps, { startFetch })(Quotes);
