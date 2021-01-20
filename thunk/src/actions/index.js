@@ -15,7 +15,7 @@ export const getQuote = () => dispatch => {
         .get('https://api.kanye.rest')
         .then((resp)=>{
             console.log(resp);
-            // dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
+            dispatch({ type:"FETCH_QUOTE_SUCCESS", payload: resp.data.quote});
         })
         .catch(err => {
             dispatch({ type:"FETCH_QUOTE_FAIL", payload:err.response.code});
