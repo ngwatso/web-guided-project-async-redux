@@ -1,6 +1,6 @@
 
 const initialState = {
-  quote: 'this is a kanye quote',
+  quote: '',
   isFetching: false,
   error: ''
 };
