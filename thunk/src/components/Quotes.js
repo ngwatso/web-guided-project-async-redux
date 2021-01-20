@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { getQuote } from '../actions';
+import { getQuote, startFetch } from '../actions';
 
 const Quotes = ({ quote, isFetching, error }) => {
   useEffect(() => {
   });
 
   const handleClick = ()=> {
-    
+
   };
 
   if (error) {
