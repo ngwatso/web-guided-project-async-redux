@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+export const FETCH_QUOTE_START = "FETCH_QUOTE_START";
+export const FETCH_QUOTE_FAIL = "FETCH_QUOTE_FAIL";
+export const FETCH_QUOTE_SUCCESS = "FETCH_QUOTE_SUCCESS";
+
 // export const getQuote = () => {
 //     return (dispatch => {
 //         dispatch({ type:"FETCH_QUOTE_START"});
