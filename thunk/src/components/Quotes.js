@@ -9,12 +9,6 @@ const Quotes = ({ quote, isFetching, error, getQuote }) => {
 
   const handleClick = ()=> {
     getQuote();
-    // startFetch();
-    // //do api call
-    // //if success
-    // fetchSuccess();
-    // //if error
-    // fetchFail();
   };
 
   if (error) {
