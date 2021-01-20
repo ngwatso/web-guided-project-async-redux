@@ -5,7 +5,8 @@ import { getQuote } from '../actions';
 
 const Quotes = ({ quote, isFetching, error, getQuote }) => {
   useEffect(() => {
-  });
+    getQuote();
+  }, []);
 
   const handleClick = ()=> {
     getQuote();
