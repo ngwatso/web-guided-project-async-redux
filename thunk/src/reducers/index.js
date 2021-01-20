@@ -8,21 +8,21 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case("FETCH_QUOTE_START"):
+    case(FETCH_QUOTE_START):
       return({
         ...state,
         isFetching: true,
         error:'',
         quote:''
       });
-    case("FETCH_QUOTE_SUCCESS"):
+    case(FETCH_QUOTE_SUCCESS):
       return({
         ...state,
         quote: action.payload,
         isFetching: false,
         error:''
       })
-    case("FETCH_QUOTE_FAIL"):
+    case(FETCH_QUOTE_FAIL):
       return({
         ...state,
         error: action.payload,
