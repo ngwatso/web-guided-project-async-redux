@@ -8,6 +8,11 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case("FETCH_QUOTE_START"):
+      return({
+        ...state,
+        isFetching: true,
+        error:''
+      });
     default:
       return state;
   }
