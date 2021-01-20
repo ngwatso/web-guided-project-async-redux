@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchFail, getQuote, startFetch } from '../actions';
+import { getQuote } from '../actions';
 
 const Quotes = ({ quote, isFetching, error, startFetch }) => {
   useEffect(() => {
@@ -40,4 +40,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { startFetch })(Quotes);
+export default connect(mapStateToProps, { getQuote })(Quotes);
