@@ -14,6 +14,7 @@ class FriendsList extends React.Component {
 
   addFriend = e => {
     e.preventDefault();
+    console.log("here in ffriendlist");
     this.props.addNewFriend(this.state.newFriend);
     this.setState({newFriend:""});
   };
