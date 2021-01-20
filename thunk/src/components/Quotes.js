@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { getQuote, startFetch } from '../actions';
+import { fetchFail, getQuote, startFetch } from '../actions';
 
 const Quotes = ({ quote, isFetching, error, startFetch }) => {
   useEffect(() => {
   });
 
   const handleClick = ()=> {
-    startFetch();
   };
 
   if (error) {
