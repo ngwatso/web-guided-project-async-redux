@@ -13,11 +13,12 @@ export const getQuote = () => dispatch => {
     dispatch({ type:"FETCH_QUOTE_START"});
     axios 
         .get('https://api.kanye.rest')
-        .then(()=>{
-            dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
+        .then((resp)=>{
+            console.log(resp);
+            // dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
         })
         .catch(err => {
-            dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:err.response.code});
+            dispatch({ type:"FETCH_QUOTE_FAIL", payload:err.response.code});
         });
 }
 
