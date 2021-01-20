@@ -7,6 +7,10 @@ const Quotes = ({ quote, isFetching, error }) => {
   useEffect(() => {
   });
 
+  const handleClick = ()=> {
+    
+  };
+
   if (error) {
     return <h2>We got an error: {error}</h2>;
   }
