@@ -1,7 +1,18 @@
+import axios from 'axios';
+
+// export const getQuote = () => {
+//     return (dispatch => {
+//         dispatch({ type:"FETCH_QUOTE_START"});
+//         setTimeout(()=> {
+//             dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
+//         }, 3000);
+//     });
+// }
 
 export const getQuote = () => dispatch => {
     dispatch({ type:"FETCH_QUOTE_START"});
-    setTimeout(()=> {
+    axios 
+        .get('https://api.kayne.rest')
         dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
     }, 3000);
 }
