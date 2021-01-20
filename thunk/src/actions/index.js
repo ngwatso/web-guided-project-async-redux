@@ -1,9 +1,11 @@
 
 export getQuote = () => {
-    //dispatch FETCH_QUOTE_STATE
-    //do axios call
-    //dispatch FETCH_QUOTE_START
-    //dispatch FETCH_QUOTE_FAIL
+
+    return (dispatch => {
+        dispatch({ type:"FETCH_QUOTE_START"});
+        dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
+
+    });
 }
 
 // export const startFetch = () => {
