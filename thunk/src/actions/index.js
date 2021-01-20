@@ -2,6 +2,7 @@
 export const getQuote = () => {
     return (dispatch => {
         dispatch({ type:"FETCH_QUOTE_START"});
+        
         dispatch({ type:"FETCH_QUOTE_SUCCESS", payload:"random kanye quote"});
     });
 }

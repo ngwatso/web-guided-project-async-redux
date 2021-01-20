@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 
 import { getQuote } from '../actions';
 
-const Quotes = ({ quote, isFetching, error, startFetch }) => {
+const Quotes = ({ quote, isFetching, error, getQuote }) => {
   useEffect(() => {
   });
 
   const handleClick = ()=> {
+    getQuote();
     // startFetch();
     // //do api call
     // //if success
