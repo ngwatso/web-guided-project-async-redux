@@ -8,6 +8,12 @@ const Quotes = ({ quote, isFetching, error, startFetch }) => {
   });
 
   const handleClick = ()=> {
+    // startFetch();
+    // //do api call
+    // //if success
+    // fetchSuccess();
+    // //if error
+    // fetchFail();
   };
 
   if (error) {
