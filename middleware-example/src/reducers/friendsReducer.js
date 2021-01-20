@@ -10,6 +10,7 @@ const initialState = {
 export const friendsReducer = (state = initialState, action) => {
   console.log("state", state);
   console.log("action", action);
+  console.log("-------");
   
   switch (action.type) {
     case ADD_FRIEND:
