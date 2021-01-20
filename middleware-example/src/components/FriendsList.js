@@ -52,6 +52,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-  mapStateToProps,
-  { addNewFriend, toggleFriend }
+  mapStateToProps
 )(FriendsList);
