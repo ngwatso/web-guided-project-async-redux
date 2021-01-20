@@ -14,15 +14,15 @@ export const FETCH_QUOTE_SUCCESS = "FETCH_QUOTE_SUCCESS";
 // }
 
 export const getQuote = () => dispatch => {
-    dispatch({ type:"FETCH_QUOTE_START"});
+    dispatch({ type:FETCH_QUOTE_START});
     axios 
         .get('https://api.kanye.rest')
         .then((resp)=>{
             console.log(resp);
-            dispatch({ type:"FETCH_QUOTE_SUCCESS", payload: resp.data.quote});
+            dispatch({ type:FETCH_QUOTE_SUCCESS, payload: resp.data.quote});
         })
         .catch(err => {
-            dispatch({ type:"FETCH_QUOTE_FAIL", payload:err.response.code});
+            dispatch({ type:FETCH_QUOTE_FAIL, payload:err.response.code});
         });
 }
 
