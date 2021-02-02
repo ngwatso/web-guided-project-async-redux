@@ -14,7 +14,7 @@ export const getQuote = () => {
         dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data.quote })
       })
       .catch(err => {
-        console.error('error getting kanye quote: res: ', err.message)
+        console.error('error getting kanye quote: res: ', err.name)
         dispatch({ type: FETCH_DATA_FAILURE, payload: err.message })
       })
   }
