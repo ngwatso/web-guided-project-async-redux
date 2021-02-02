@@ -1,4 +1,4 @@
-import { FETCH_DATA_SUCCESS, START_FETCHING_DATA } from '../actions';
+import { FETCH_DATA_SUCCESS, START_FETCHING_DATA, FETCH_DATA_FAILURE } from '../actions';
 
 const initialState = {
   quote: null,
@@ -20,6 +20,12 @@ export const reducer = (state = initialState, action) => {
         quote: action.payload,
         isFetching: false,
         error: ''
+      }
+    }
+    case FETCH_DATA_FAILURE: {
+      return {
+        ...state,
+        error: action.payload
       }
     }
     default:
