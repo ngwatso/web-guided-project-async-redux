@@ -12,7 +12,7 @@ export const getQuote = () => {
       .then(res => {
         console.log('bk: actions/index.js: getQuote: res: ', res)
         dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data })
-      )
+      })
       .catch(err => console.error('error getting kanye quote: res: ', res))
   }
 }
