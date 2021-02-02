@@ -1,4 +1,4 @@
-import { START_FETCHING_DATA } from '../actions';
+import { FETCH_DATA_SUCCESS, START_FETCHING_DATA } from '../actions';
 
 const initialState = {
   quote: null,
@@ -12,6 +12,12 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: true
+      }
+    }
+    case FETCH_DATA_SUCCESS: {
+      return {
+        ...state,
+        quote: action.payload
       }
     }
     default:
