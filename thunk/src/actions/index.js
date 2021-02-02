@@ -9,7 +9,11 @@ export const getQuote = () => {
     dispatch({ type: START_FETCHING_DATA });
     // flow control
     axios.get('https://api.kanye.rest')
-      .then(res => console.log('bk: actions/index.js: getQuote: res: ', res))
-      .catch(err => console.error('error getting kanye quote: res: ', res))
+      .then(res => {
+        console.log('bk: actions/index.js: getQuote: res: ', res)
+        dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data })
+      )
+  }
+      .catch (err => console.error('error getting kanye quote: res: ', res))
   }
 }
