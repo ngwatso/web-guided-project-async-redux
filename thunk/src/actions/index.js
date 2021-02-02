@@ -7,5 +7,9 @@ import axios from 'axios';
 export const getQuote = () => {
   return (dispatch) => {
     dispatch({ type: START_FETCHING_DATA });
+    // flow control
+    axios.get('https://api.kanye.rest')
+      .then(res => console.log('bk: actions/index.js: getQuote: res: ', res))
+      .catch(err => console.error('error getting kanye quote: res: ', res))
   }
 }
