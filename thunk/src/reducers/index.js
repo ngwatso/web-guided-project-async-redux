@@ -1,3 +1,4 @@
+import { START_FETCHING_DATA } from '../actions';
 
 const initialState = {
   quote: null,
@@ -7,6 +8,12 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case START_FETCHING_DATA: {
+      return {
+        ...state,
+        isFetching: true
+      }
+    }
     default:
       return state;
   }
