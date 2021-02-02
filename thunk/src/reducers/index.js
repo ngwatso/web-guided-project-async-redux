@@ -17,7 +17,9 @@ export const reducer = (state = initialState, action) => {
     case FETCH_DATA_SUCCESS: {
       return {
         ...state,
-        quote: action.payload
+        quote: action.payload,
+        isFetching: false,
+        error: ''
       }
     }
     default:
