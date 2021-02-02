@@ -5,7 +5,7 @@ export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
 import axios from 'axios';
 
 export const getQuote = () => {
-  return {
-    type: START_FETCHING_DATA
-  };
+  return (dispatch) => {
+    dispatch({ type: START_FETCHING_DATA });
+  }
 }
